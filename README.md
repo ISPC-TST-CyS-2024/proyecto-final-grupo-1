@@ -1,2 +1,34 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/sIjAfaJX)
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=15169000&assignment_repo_type=AssignmentRepo)
+![sistema](/assets/Conexion.png)                               ![logo](/assets/LogoISPC.png)
+
+# TECNICATURA SUPERIOR EN TELECOMUNICACIONES
+
+## PROYECTO FINAL (SISTEMA DE CONTROL Y SERVICIOS Y ARQUITECTURA Y CONECTIVIDAD)
+
+![line](/assets/line.png)
+- 👨‍🏫 **Cristian Gonzalo Vera**. Prof. de Sistemas de Control y Servicios. [Ver Github](https://github.com/Gona79).
+
+- 👨‍🏫 **Jorge Morales**. Prof. de Arquitectura y Conectividad. [Ver Github](https://github.com/JorEl057).
+
+![line](/assets/line.png)
+
+**Alumnos - Equipo Sistema de Control y Servicios**  
+✔️ **Maria Lilen Guzmán**  [Ver Github](https://github.com/lilenguzman01)  
+✔️ **Ulises Ale**  [Ver Github](https://github.com/ulisesaale)  
+✔️ **Jose Augusto Orsili Ortiz**  [Ver Github](https://github.com/joseorsili)  
+✔️ **Dario Arriola**  [Ver Github](https://github.com/dr-arriola)  
+
+
+### Año - **2024**
+
+
+
+                          CASA IoT  
+### Introducción del Proyecto  
+El proyecto consiste en la construcción de una maqueta de una casa inteligente (IoT) que integra diversos elementos electrónicos y sensores para simular el funcionamiento de un hogar automatizado. La maqueta incluye dispositivos como un horno eléctrico, un ventilador de techo, un portón levadizo, una heladera, un sensor de corriente, y luces LED, todos controlados y monitoreados mediante una placa microcontroladora ESP32-C3.
+
+### **Tecnologías Utilizadas**  
+• **IDE:** Visual Studio Code con ESP-IDF y Google Home  
+• **Protocolos:** Matter  
+• **Módulo:** ESP32-C3 Super Mini  
+• **Framework Ágil:** Scrum, Kanban  
+• **Control de Versiones:** Git, GitHub  
