@@ -1,8 +1,8 @@
-![sistema](/assets/Conexion.png)                               ![logo](/assets/LogoISPC.png)
+![sistema](/assets/Curso%20ISPC.png)
 
 # TECNICATURA SUPERIOR EN TELECOMUNICACIONES
 
-## PROYECTO FINAL (SISTEMA DE CONTROL Y SERVICIOS Y ARQUITECTURA Y CONECTIVIDAD)
+## Proyecto Final (Sistema de Control y Servicios y Arquitectura y Conectividad)
 
 ![line](/assets/line.png)
 - 👨‍🏫 **Cristian Gonzalo Vera**. Prof. de Sistemas de Control y Servicios. [Ver Github](https://github.com/Gona79).
@@ -22,7 +22,7 @@
 
 
 
-                          CASA IoT  
+                                                     CASA IoT  
 ### Introducción del Proyecto  
 El proyecto consiste en la construcción de una maqueta de una casa inteligente (IoT) que integra diversos elementos electrónicos y sensores para simular el funcionamiento de un hogar automatizado. La maqueta incluye dispositivos como un horno eléctrico, un ventilador de techo, un portón levadizo, una heladera, un sensor de corriente, y luces LED, todos controlados y monitoreados mediante una placa microcontroladora ESP32-C3.
 
