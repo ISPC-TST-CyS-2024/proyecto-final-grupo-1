@@ -22,7 +22,7 @@
 
 
 
-                          CASA IoT  
+                                                              CASA IoT  
 ### Introducción del Proyecto  
 El proyecto consiste en la construcción de una maqueta de una casa inteligente (IoT) que integra diversos elementos electrónicos y sensores para simular el funcionamiento de un hogar automatizado. La maqueta incluye dispositivos como un horno eléctrico, un ventilador de techo, un portón levadizo, una heladera, un sensor de corriente, y luces LED, todos controlados y monitoreados mediante una placa microcontroladora ESP32-C3.
 
