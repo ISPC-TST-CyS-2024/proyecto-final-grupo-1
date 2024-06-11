@@ -4,13 +4,15 @@ from machine import Pin, PWM
 import time
 import _thread
 
-# Configuración de los pines de los LEDs
+# Configuración de los pines de los LEDs y otros dispositivos
 led_pins = {
     'dormitorio': Pin(20, Pin.OUT),
     'comedor': Pin(21, Pin.OUT),
     'cocina': Pin(8, Pin.OUT),
     'heladera_1': Pin(9, Pin.OUT),
-    'heladera_2': Pin(10, Pin.OUT)
+    'heladera_2': Pin(10, Pin.OUT),
+    'ventilador': Pin(2, Pin.OUT),   # Ventilador
+    'horno': Pin(3, Pin.OUT)         # Horno
 }
 
 # Configuración del servomotor
@@ -34,11 +36,11 @@ def connect_wifi(ssid, password):
         attempt += 1
 
     if wlan.isconnected():
-        print('Conección exitosa')
+        print('Conexión exitosa')
         print('Configuración de red:', wlan.ifconfig())
         return wlan.ifconfig()
     else:
-        raise OSError('No se pudo conectar a la red WiFi')
+        return None
 
 # Función para manejar las solicitudes HTTP
 def web_page():
@@ -75,6 +77,10 @@ def web_page():
     <button class="btn on" id="heladera_off" onclick="toggle('heladera', 'off')">Heladera OFF</button><br><br>
     <button class="btn off" id="cochera_on" onclick="toggle('cochera', 'on')">Cochera ON</button>
     <button class="btn on" id="cochera_off" onclick="toggle('cochera', 'off')">Cochera OFF</button><br><br>
+    <button class="btn off" id="ventilador_on" onclick="toggle('ventilador', 'on')">Ventilador ON</button>
+    <button class="btn on" id="ventilador_off" onclick="toggle('ventilador', 'off')">Ventilador OFF</button><br><br>
+    <button class="btn off" id="horno_on" onclick="toggle('horno', 'on')">Horno ON</button>
+    <button class="btn on" id="horno_off" onclick="toggle('horno', 'off')">Horno OFF</button><br><br>
     <script>
         function toggle(device, state) {
             var xhr = new XMLHttpRequest();
@@ -117,12 +123,23 @@ def blink_leds():
     led_pins['heladera_1'].off()
     led_pins['heladera_2'].off()
 
-# Función para mover el servomotor
+# Función para mover el servomotor lentamente
 def move_cochera(on):
     if on:
-        cochera.duty(40)  # Mover a 90 grados
+        start_duty = 115
+        end_duty = 40
     else:
-        cochera.duty(115)  # Regresar a 0 grados
+        start_duty = 40
+        end_duty = 115
+
+    if start_duty < end_duty:
+        step = 1
+    else:
+        step = -1
+
+    for duty in range(start_duty, end_duty, step):
+        cochera.duty(duty)
+        time.sleep(0.02)  # Ajusta el tiempo de retardo para controlar la velocidad
 
 def handle_request(request):
     global blinking
@@ -148,13 +165,25 @@ def handle_request(request):
         move_cochera(True)
     if '/cochera/off' in request:
         move_cochera(False)
+    if '/ventilador/on' in request:
+        led_pins['ventilador'].on()
+    if '/ventilador/off' in request:
+        led_pins['ventilador'].off()
+    if '/horno/on' in request:
+        led_pins['horno'].on()
+    if '/horno/off' in request:
+        led_pins['horno'].off()
 
 # Conectar a la red WiFi
-ssid = 'JO3'
-password = 'xpl203502'
+ssid_primary = 'JO3'
+password_primary = 'xpl203502'
+ssid_secondary = 'JO4'
+password_secondary = 'xpl203503'
 
 try:
-    connect_wifi(ssid, password)
+    if not connect_wifi(ssid_primary, password_primary):
+        print('Failed to connect to primary WiFi, trying secondary...')
+        connect_wifi(ssid_secondary, password_secondary)
 except OSError as e:
     print('Failed to connect to WiFi:', e)
     while True:
