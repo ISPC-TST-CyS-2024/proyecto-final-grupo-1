@@ -52,6 +52,19 @@ La placa microcontroladora será el cerebro de la casa IoT, controlando y monito
 
 **Iluminación:** La maqueta contará con 4 luces LED internas (cocina, dormitorio, baño, cochera) y 2 luces LED externas, todas controladas por la placa microcontroladora para simular el encendido y apagado de la iluminación en diferentes ambientes de la casa.
 
+## Presentacion de la Implementacion
+
+**Proceso de Maqueta**
+<video src="https://github.com/ISPC-TST-CyS-2024/proyecto-final-grupo-1/assets/84986194/59fca4e1-53fd-4ec0-9569-02cd57fca6dd" controls="controls" style="max-width: 100%;">
+</video>  
+
+**Explicación de Código**
+[Mira la explicación de código aquí](https://drive.google.com/file/d/1Tf7PQxPp2p6PIo1dj8sq_xX3BIvEcpu1/view?usp=sharing)  
+
+**Prueba casa domotica**
+<video src="https://github.com/ISPC-TST-CyS-2024/proyecto-final-grupo-1/assets/84986194/9e443ecf-be48-4896-8d2e-c5f079661472" controls="controls" style="max-width: 100%;">
+</video>  
+
 ### Resumen  
 
 La construcción de esta maqueta de casa IoT permitirá comprender los principios básicos de la domótica y la automatización del hogar, utilizando dispositivos electrónicos y sensores para crear un entorno inteligente y eficiente. El proyecto servirá como base para el desarrollo de proyectos más complejos de domótica y aplicaciones IoT en el ámbito residencial y comercial.
